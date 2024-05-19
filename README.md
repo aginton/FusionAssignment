@@ -2,7 +2,7 @@ This demo uses a Spring Boot backend to manage the game state and a frontend tha
 
 The communication between the frontend and backend is done via WebSockets.
 
-Entities Used
+**Entities Used**
 - GameState: Represents the state of the game, including the board, status message, and whether the game is over
   - Even though the game is displayed as a 3x3 table, we can model it using a 9 element array, using the array index to correspond to the table position 
 - PlayerMove: Represents a move made by a player (i.e., the index of the cell they clicked)
@@ -10,7 +10,7 @@ Entities Used
 - GameController: Handles WebSocket messages for moves and game resets
 - WebSocketConfig: Configures WebSocket endpoints and message broker
 
-Basic Flow
+**Basic Flow**
 1. Initialization: The game board is initialized with empty cells. The currentPlayer is set to 'X'
 2. Frontend Player Move: When a player clicks a cell, a PlayerMove message is sent to the backend via WebSocket
 3. Backend Process Move: The GameService processes the move by updating the board and checking for a win or draw condition
